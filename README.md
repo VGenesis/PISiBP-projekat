@@ -1,4 +1,4 @@
-#   Project structure
+#   24RSNews
 
 ## Overview
 
@@ -9,8 +9,8 @@ An online news anchor for journalists and publishers.
 According to the description above, we will formulate a project file system structure accordingly:
 +	Root Folder
 	+	Backend	
-		+	DBC
 		+	DB
+		+	DBC
 	+	Frontend
 		+	API
 		+	Pages
