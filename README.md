@@ -1,38 +1,23 @@
-#   24RSNews
+#   Project structure
 
 ## Overview
 
 An online news anchor for journalists and publishers.
 
-## Folder structure
+## Project Structure
 
-According to the description above, we will formulate a project file system structure accordingly:
-+	Root Folder
-	+	Backend	
-		+	DB
-		+	DBC
-	+	Frontend
-		+	API
-		+	Pages
-		+	Styles
-
-***Backend*** folder contains the entire backend system for the project:
-+	**DB** folder contains the PDO database connections and methods
-+	**DBC** folder contains the access methods for the database connection functionalities
-
-***Frontend*** folder contains the frontend system for the project:
-+	**API** folder contains the scripts for accessing the DBC system
-+	**Pages** folder contains the webpages' source code
-+	**Styles** folder contains the CSS styles for webpages
+The project is a modular application made up from 3 services
+1.	24news-backend: A Spring Boot service for fetching data from the database
+2.	24news-web:	A React web app for displaying news articles to the end user
+3.	24news-db:	A PostgreSQL database containing user/article data
 
 User requests in this system function in the following pattern:
-1.	The user submits a request through the webpage
-2.	The request is sent to the backend through the corresponding API function
-3.	The request is sent to the PDO method through a corresponding DBC function
-4.	The requests' query is executed on the database
-5.	The query result is returned recursively through the abovementioned functions to the user
+1.	The user submits a request through the webpage (24news-web)
+2.	The request is sent to the backend (24news-backend)
+3.	The backend fetches the requested data from the database (24news-db)
+4.	The query result is returned recursively through the abovementioned functions to the user
 
-## System roles
+## System entities
 
 ### User
 +   Can view news articles
@@ -107,23 +92,16 @@ User requests in this system function in the following pattern:
     -   ID
     -   Name
 
-## Softvare technology stack
+## Software technology stack
 
-Selected languages: 
--   Front-End:              HTML/CSS
--   API:                    JavaScript
--   Back-End:               PHP
-
-Optional languages:
--   Desktop application: Java
+Tech Stack:
+-   Front-End:              React
+-   Back-End:               Java/Spring Boot
+-	Database:				PostgreSQL
 
 Selected CASE Tools: 
 -   IDE:                    VSCode
--   DBMS:                   MySQL Workbench
 -   Project Management:     Draw.io
-
-Optional CASE Tools: 
--   Documentation:          Doxygen
 
 ## Front-End
 
