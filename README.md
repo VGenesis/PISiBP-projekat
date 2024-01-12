@@ -148,12 +148,9 @@ Selected CASE Tools:
 
 ### DB Connections
 
-Using PDO database connection tools.
+Using Spring Boot to connect database with the frontend
 
-Each entity and link will have their own database connectors.
-Each database connectors will have execution scripts for their every functionality.
-
-***DBC system***
+### DB Structure
 1.	ArticleDB
 	-	Insert article
 	-	Get article by ID
@@ -183,13 +180,4 @@ Each database connectors will have execution scripts for their every functionali
 	-	Get category by ID
 	-	Get category by name
 	-	Update category
-
-## API
-
-Using JavaScript and AJAX.
-
-Each DBC functionality will have its' own JS script.
-Each of these scripts may contain one or more functions:
-*	Necessary:	a function that delivers the DBC functionality
-*	Optional:	selection/sorting function based on DBC result
 
