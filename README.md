@@ -17,7 +17,7 @@ User requests in this system function in the following pattern:
 3.	The backend fetches the requested data from the database (24news-db)
 4.	The query result is returned recursively through the abovementioned functions to the user
 
-## System entities
+## System roles
 
 ### User
 +   Can view news articles
