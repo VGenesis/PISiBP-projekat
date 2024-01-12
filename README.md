@@ -50,95 +50,95 @@ User requests in this system function in the following pattern:
     -   After approval cannot be modified
 +   Can be approved; will be published to frontpage afterwards
 
-## Database management
+## Database system
 
 ### Entities
-+   Article
-    -   ID
-    -   Journalist ID
-    -   Publisher ID
-    -   Title
-    -   Content (plain-text or file)
-    -   Date published
-    -   Category                            required 1
-    -   Likes/dislikes & rating
-    -   Tags
-    -   Comments
-+   Draft
-    -   ID
-    -   Journalist ID
-    -   Publisher ID
-    -   Title
-    -   Content
-    -   Category                            required 1
-+   Journalist
-    -   ID
-    -   Name, Surname
-    -   Categories                          required 1+
-+   Publisher
-    -   ID
-    -   Name, Surname
-    -   Categories                          required 1+
-+   Main Publisher
-    -   ID
-    -   Name, Surname
++   	Article
+    	-   ID
+    	-   Journalist ID
+    	-   Publisher ID
+    	-   Title
+    	-   Content (plain-text or file)
+    	-   Date published
+    	-   Category                            required 1
+    	-   Likes/dislikes & rating
+    	-   Tags
+    	-   Comments
++ 	Draft
+   	-   ID
+    	-   Journalist ID
+    	-   Publisher ID
+    	-   Title
+    	-   Content
+    	-   Category                            required 1
++   	Journalist
+    	-   ID
+    	-   Name, Surname
+    	-   Categories                          required 1+
++   	Publisher
+    	-   ID
+    	-   Name, Surname
+    	-   Categories                          required 1+
++   	Main Publisher
+    	-   ID
+    	-   Name, Surname
 
 ### Links
-+   Like
-    -   ID
-    -   Article ID
-    -   User ID; not in database, created from user IP address
-+   Category
-    -   ID
-    -   Name
++   	Like
+    	-   ID
+    	-   Article ID
+    	-   User ID; not in database, created from user IP address
++   	Category
+    	-   ID
+    	-   Name
 
 ## Software technology stack
 
 Tech Stack:
--   Front-End:              React
--   Back-End:               Java/Spring Boot
+-   	Front-End:              React
+-   	Back-End:               Java/Spring Boot
 -	Database:				PostgreSQL
 
 Selected CASE Tools: 
--   IDE:                    VSCode
--   Project Management:     Draw.io
+-   	IDE:                    VSCode
+-   	Project Management:     Draw.io
 
 ## Front-End
 
 ### Websites
 
-1.  Front Page:
-    -   Displays news in several rows
-        +   Row for popular news
-        +   Rows for a few categories
+1.  	Front Page:
+    	-   	Displays news in several rows
+        	+   	Row for popular news
+        	+   	Rows for a few categories
 	-	Clicking on news redirects the 'Article' page
-    -   Navigation bar to other sites
-    -   Login/Register/Account redirect
-	-   Search functionality
-    -   Category fields for quick search
-2.	Article page:
+    	-   	Navigation bar to other sites
+    	-   	Login/Register/Account redirect
+	-   	Search functionality
+    	-   	Category fields for quick search
+2. 	Article page:
 	-	Displays article contents
 	-	Displays some Journalist information
 	-	Contains Like & Dislike buttons
 	-	Contains Comment form
-3.  Login Page:
-	-   Contains login form
-	-   Contains redirect to 'Register' page
-4.  Registration page:
-	-   Contains registration form
-	-   Contains redirect to 'Login' page
-5.  Account page:
-	-   Displays account information
-	-   Contains redirect to draft 'Make Article' page
-	-   Contains redirect to 'User Articles' page
-	-   Contains redirect to 'User Drafts' page
-6.	User Articles page:
+3. 	Login Page:
+	-   	Contains login form
+	-   	Contains redirect to 'Register' page
+4. 	Registration page:
+	-   	Contains registration form
+	-   	Contains redirect to 'Login' page
+5. 	Account page:
+	-   	Displays account information
+	-   	Contains redirect to draft 'Make Article' page
+	-   	Contains redirect to 'User Articles' page
+	-   	Contains redirect to 'User Drafts' page
+6. 	User Articles page:
 	-	Displays a list of articles by Journalist
 	-	Clicking on a list element redirects to the 'Article' page
-7.	User Drafts page:
+7. 	User Drafts page:
 	-	Displays a list of drafts by Journalist
 	-	Clicking on a list element redirects to the 'Edit Draft' page
-8.	Edit Draft page:
+8. 	Edit Draft page:
 	-	Displays the contents of the draft
 	-	Displays the approval status of the draft
 	-	Contains a send form
@@ -181,8 +181,4 @@ Using Spring Boot's internals to connect the user interface with the database.
 	-	Get category by ID
 	-	Get category by name
 	-	Update category
-
-Each of these scripts may contain one or more functions:
-*	Necessary:	a function that delivers the DBC functionality
-*	Optional:	selection/sorting function based on DBC result
 
